@@ -14,21 +14,26 @@ If the value of the search key is less than the item in the middle of the interv
 function binarySearch(arr, key) {
     let startIndex = 0
     let endIndex = arr.length - 1
-    let mid = (startIndex + endIndex) / 2
+    // for mid index
+    let mid = Math.floor(startIndex + (endIndex - startIndex) / 2)
     while (startIndex <= endIndex) {
-        if (arr[mid] == key) {
-            console.log("mid", mid)
+        if (arr[mid] === key) {
+            console.log("mid")
             return mid;
         }
         // go to right 
-        if (key > arr[mid]) {
+        else if (key > arr[mid]) {
             startIndex = mid + 1
+            console.log("mid+1")
         }
         else {
-            startIndex = mid - 1
+            // go to left
+            endIndex = mid - 1
+            console.log("mid-1")
         }
-        mid = (startIndex + endIndex) / 2
+        mid = Math.floor(startIndex + (endIndex - startIndex) / 2)
     }
-    console.log("end")
+    return -1
 }
-binarySearch([2, 4, 6, 7, 9, 11, 17, 19, 27], 27)
+console.log(binarySearch("Rigth index", [2, 4, 6, 7, 9, 11, 27], 11))
+//console.log(binarySearch("Left Index", [2, 4, 6, 7, 9, 11, 27, 17, 19], 4))
