@@ -15,4 +15,4 @@ function selection(arr) {
 }
 console.log(selection([64, 25, 12, 22, 11]))
 console.log(selection([6, 2, 1, 22, 11]))
-console.log(selection([ 1, 2, 3,5,4]))
+console.log(selection([1, 2, 3, 5, 4]))
