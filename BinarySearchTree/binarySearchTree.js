@@ -82,20 +82,74 @@ class BSTree {
         }
     }
     // deletion
-    deleteNode(root, key) {
-        if (root === null) return root
-        if (root.value === key) {
-            // o child
-            // 1 child
-            // 2 child
-        }
-        else if (root.data > x) {
-            return this.deleteNode(root.left, key)
-        }
-        else {
-            return this.deleteNode(root.right, key)
-        }
+    getLeftMostNode(root) {
+        if (!root) return null;
+        let node = this.getLeftMostNode(root.left);
+        return node ? node : root;
     }
+    deleteNode(root, key) {
+        if (!root) return null;
+        if (root.val > key) {
+            root.left = this.deleteNode(root.left, key);
+        } else if (root.val < key) {
+            root.right = this.deleteNode(root.right, key);
+        } else {
+            if (!root.left) return root.right;
+            if (!root.right) return root.left;
+            let succ_node = this.getLeftMostNode(root.right);
+            root.value = succ_node.value;
+            root.right = this.deleteNode(root.right, succ_node.value);
+
+        }
+        return root;
+    }
+    /*   if (root === null) return root
+      if (root.value === key) {
+          // o child
+          // 1 child
+          // 2 child
+          if (root.left === null && root.right === null) {
+
+              return null
+
+          } else if (root.left === null) {
+
+              return root.right
+
+          } else if (root.right === null) {
+
+              return root.left
+
+          } else {
+
+              /// node with two children, get the inorder successor, 
+              //smallest in the right subtree
+
+              let tempNode = this.kthSmallestNode(root.right)
+              root.value = tempNode.value
+
+              /// delete the inorder successor
+
+              root.right = this.removeNode(root.right, tempNode.value)
+              return root
+          }
+      }
+      else if (root.data > key) {
+          root.left = this.deleteNode(root.left, key)
+          return root
+      }
+      else {
+          root.right = this.deleteNode(root.right, key)
+          return root
+      }
+  } */
+    /// helper function to find the smallest node
+    /*  kthSmallestNode(node) {
+         while (!node.left === null)
+             node = node.left
+ 
+         return node
+     } */
 }
 let BST = new BSTree()
 BST.insert(8)
@@ -111,7 +165,9 @@ var root = BST.getRoot()
 console.log("Binary Search Tree Root:-", root)
 console.log("Min Value in BST:-", BST.minValueBst(root))
 console.log("max Value in BST:-", BST.maxValueBst(root))
+console.log("Delete the key in BST:-", BST.deleteNode(root, 14));
 console.log("PreOrder Traversal:-", BST.preorderTraversal(root))
 console.log("Post Order Traversal:-", BST.posorderTraversal(root))
 console.log("In Order Traversal :-", BST.inorderTraversal(root))
+console.log("Min Value in BST:-", BST.minValueBst(root))
 console.log("Search Key In BST Present or Not :-", BST.searchKey(root, 10))
