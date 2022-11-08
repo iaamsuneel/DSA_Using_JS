@@ -15,7 +15,7 @@ function x() {
 }
 x()
 // another example
-function makeAdder(x) {
+function makeAdder(x) { 
     return function (y) {
         return x + y;
     };
