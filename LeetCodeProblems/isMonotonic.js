@@ -9,4 +9,4 @@ function isMonotonic(arr) {
     }
     return isDec || isInc
 }
-console.log("isMonotonic", isMonotonic([6, 5,2, 4, 4]));
+console.log("isMonotonic", isMonotonic([6, 5, 2, 4, 4]));
