@@ -8,10 +8,9 @@ function f2() {
 
 f1(5, f2) */
 function set(x) {
-    console.log("first", x)
-    setTimeout(() => {
-        console.log("Second")
-    }, 3000)
-
+  console.log("first", x);
+  setTimeout(() => {
+    console.log("Second");
+  }, 3000);
 }
-set(6)
+set(6);
