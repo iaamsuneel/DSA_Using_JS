@@ -1,4 +1,3 @@
-
 /*  Binary Search is a searching algorithm for searching an element in a sorted list or array. 
 Binary Search is efficient than Linear Search algorithm and
  performs the search operation in logarithmic time complexity for sorted arrays or lists.
@@ -12,28 +11,27 @@ If the value of the search key is less than the item in the middle of the interv
  Time Complexity:  O(Log N), where N is the number of elements in the array.
  */
 function binarySearch(arr, key) {
-    let startIndex = 0
-    let endIndex = arr.length - 1
-    // for mid index
-    let mid = Math.floor(startIndex + (endIndex - startIndex) / 2)
-    while (startIndex <= endIndex) {
-        if (arr[mid] === key) {
-            // console.log("mid")
-            return mid;
-        }
-        // go to right 
-        else if (key > arr[mid]) {
-            startIndex = mid + 1
-            // console.log("mid+1")
-        }
-        else {
-            // go to left
-            endIndex = mid - 1
-            // console.log("mid-1")
-        }
-        mid = Math.floor(startIndex + (endIndex - startIndex) / 2)
-    }
-    return -1
+	let startIndex = 0;
+	let endIndex = arr.length - 1;
+	// for mid index
+	let mid = Math.floor(startIndex + (endIndex - startIndex) / 2);
+	while (startIndex <= endIndex) {
+		if (arr[mid] === key) {
+			// console.log("mid")
+			return mid;
+		}
+		// go to right
+		else if (key > arr[mid]) {
+			startIndex = mid + 1;
+			// console.log("mid+1")
+		} else {
+			// go to left
+			endIndex = mid - 1;
+			// console.log("mid-1")
+		}
+		mid = Math.floor(startIndex + (endIndex - startIndex) / 2);
+	}
+	return -1;
 }
-console.log(binarySearch([2, 4, 6, 7, 9, 11, 27], 11))
-console.log(binarySearch([2, 4, 6, 7, 9, 11, 27, 17, 19], 4))
+console.log(binarySearch([2, 4, 6, 7, 9, 11, 27], 11));
+console.log(binarySearch([2, 4, 6, 7, 9, 11, 27, 17, 19], 4));
