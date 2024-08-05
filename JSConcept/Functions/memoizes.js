@@ -13,7 +13,6 @@ const memoize = (fn) => {
 		}
 	};
 };
-
 const add = (a, b) => {
 	return a + b;
 };

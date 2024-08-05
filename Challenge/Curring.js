@@ -30,7 +30,6 @@ const result = calculate.add(10).multiply(5).subtract(30).add(10).multiply(2);
 console.log("result-->", result.total);
 function createCalculator() {
 	let total = 0;
-
 	return {
 		add(a) {
 			total += a;
