@@ -49,21 +49,46 @@ class SinglyLinkedList {
 		}
 		return list.join(" -> ");
 	}
+	reverse() {
+		let current = this.head;
+		let prev = null;
+		let nextNode = null;
+		while (current) {
+			nextNode = current.next;
+			current.next = prev;
+			prev = current;
+			current = nextNode;
+			//console.log("\n", "  Step :---> ", count++, "\n");
+		}
+		return prev;
+	}
+	reverseBetween(left, right) {
+		const dummy = new Node(6);
+		dummy.next = this.head;
+		let prev = dummy;
+		console.log("prev", prev);
+		for (let i = 0; i < left - 1; ++i) {
+			prev = prev.next;
+		}
+		let current = prev.next;
+		let nextNode = null;
+		for (let i = 0; i < right - left + 1; i++) {
+			const temp = current.next;
+			current.next = nextNode;
+			nextNode = current;
+			current = temp;
+		}
+		prev.next.next = current;
+		prev.next = nextNode;
+		return dummy.next;
+	}
 }
 const list = new SinglyLinkedList();
 list.push(4);
 list.push(7);
 list.push(9);
 list.push(23);
-console.log(
-	" List :: ",
-	list,
-	" \n List :: ",
-	list.printList(),
-	"\n Pop List ::",
-	list.pop(),
-	"\n ",
-	list,
-	"\n ",
-	list.printList()
-);
+list.push(3);
+console.log(" List :: ", list.printList());
+console.log(" Reverse Linked List :: ", list.reverse(), " \n ");
+console.log(" Reverse B/w Postion Linked List :: ", list.reverseBetween(2, 4));

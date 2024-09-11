@@ -1,30 +1,30 @@
 class stack {
-	constructor() {
-		this.items = [];
-	}
-	push(element) {
-		this.items.push(element);
-	}
-	pop() {
-		if (this.items.length == 0) {
-			return "already Empty";
-		}
-		return this.items.pop();
-	}
-	peek() {
-		return this.items[this.items.length - 1];
-	}
-	isEmpty() {
-		return this.items.length == 0;
-	}
-	size() {
-		return this.items.length;
-	}
-	printStack() {
-		var str = "";
-		for (var i = 0; i < this.items.length; i++) str += this.items[i] + " ";
-		return str;
-	}
+  constructor() {
+    this.items = [];
+  }
+  push(element) {
+    this.items.push(element);
+  }
+  pop() {
+    if (this.items.length == 0) {
+      return "already Empty";
+    }
+    return this.items.pop();
+  }
+  peek() {
+    return this.items[this.items.length - 1];
+  }
+  isEmpty() {
+    return this.items.length == 0;
+  }
+  size() {
+    return this.items.length;
+  }
+  printStack() {
+    var str = "";
+    for (var i = 0; i < this.items.length; i++) str += this.items[i] + " ";
+    return str;
+  }
 }
 const stackArray = new stack();
 stackArray.push(2);

@@ -19,21 +19,49 @@
 	return Array.from(arr).map((item) => JSON.parse(item));
 };
 console.log(threeSum([3, 0, -2, -1, 1, 2])); */
-function threeSum(nums, diff) {
-	const results = [];
-	const len = nums.length;
-	for (let i = 0; i < len - 2; i++) {
-		for (let j = i + 1; j < len - 1; j++) {
-			for (let k = j + 1; k < len; k++) {
-				if (nums[j] - nums[i] == diff && nums[k] - nums[j] == diff) {
-					results.push([nums[i], nums[j], nums[k]]);
-				}
-			}
-		}
-	}
-	return results;
-}
+// TLE ,TC - O(n3)
+/* function threeSum(nums, target) {
+  const results = [];
+  const len = nums.length;
+  for (let i = 0; i < len - 2; i++) {
+    for (let j = i + 1; j < len - 1; j++) {
+      for (let k = j + 1; k < len; k++) {
+        if (nums[i] + nums[j] + nums[k] == target) {
+          results.push([nums[i], nums[j], nums[k]]);
+        }
+      }
+    }
+  }
+  return results;
+} */
 
-// Example usage
-const nums = [0, 1, 4, 6, 7, 10];
-console.log(threeSum(nums, 3)); // Output: [ [-2, -1, 3], [-2, 0, 2], [-1, 0, 1] ]
+// uisng two pointer
+var threeSum = function (nums) {
+  let res = [];
+  nums.sort((a, b) => a - b);
+  for (let i = 0; i < nums.length; i++) {
+    if (i > 0 && nums[i] === nums[i - 1]) {
+      continue;
+    }
+    let j = i + 1;
+    let k = nums.length - 1;
+    while (j < k) {
+      let total = nums[i] + nums[j] + nums[k];
+      if (total > 0) {
+        k--;
+      } else if (total < 0) {
+        j++;
+      } else {
+        res.push([nums[i], nums[j], nums[k]]);
+        j++;
+        while (nums[j] === nums[j - 1] && j < k) {
+          j++;
+        }
+      }
+    }
+  }
+  return res;
+};
+
+const nums = [-1, 0, 1, 2, -1, -4];
+console.log(threeSum(nums, 0));

@@ -1,20 +1,19 @@
 var longestConsecutive = function (nums) {
-	const arr = nums
-		.filter((item, index) => nums.indexOf(item) === index)
-		.sort((a, b) => a - b);
-	if (nums.length == 0) return 0;
-	console.log(arr);
-	let res = [],
-		count = 1;
-	for (let i = 0; i < arr.length; i++) {
-		if (arr[i] + 1 === arr[i + 1]) {
-			count++;
-		} else {
-			res.push(count);
-			count = 1;
+	if (nums.length === 0) return 0;
+	const uniqueNums = new Set(nums); // Removes duplicates
+	let longestStreak = 0;
+	for (let num of uniqueNums) {
+		if (!uniqueNums.has(num - 1)) {
+			let currentNum = num;
+			let currentStreak = 1;
+			while (uniqueNums.has(currentNum + 1)) {
+				currentNum++;
+				currentStreak++;
+			}
+			longestStreak = Math.max(longestStreak, currentStreak);
 		}
 	}
-	return Math.max(...res);
+	return longestStreak;
 };
-console.log(longestConsecutive([100, 4, 200, 1, 3, 2])); // [9,1,4,7,3,-1,0,5,8,-1,6]
-console.log(longestConsecutive([9, 1, 4, 7, 3, -1, 0, 5, 8, -1, 6]));
+console.log(longestConsecutive([100, 4, 200, 1, 3, 2]));
+console.log(longestConsecutive([0, 3, 7, 2, 5, 8, 4, 6, 0, 1]));
