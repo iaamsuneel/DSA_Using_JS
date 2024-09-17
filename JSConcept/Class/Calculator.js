@@ -33,3 +33,38 @@ class Calculator {
 
 const res = new Calculator(3).multiply(5).power(2).getResult();
 console.log(res);
+// using function
+function createCalculator(value) {
+  let x = value;
+  return {
+    add: function (value) {
+      x += value;
+      return this;
+    },
+    subtract: function (value) {
+      x -= value;
+      return this;
+    },
+    multiply: function (value) {
+      x *= value;
+      return this;
+    },
+    divide: function (value) {
+      if (value === 0) {
+        throw new Error("Division by zero is not allowed");
+      }
+      x /= value;
+      return this;
+    },
+    power: function (value) {
+      x = Math.pow(x, value);
+      return this;
+    },
+    getResult: function () {
+      return x;
+    },
+  };
+}
+
+const res1 = createCalculator(3).multiply(5).power(2).getResult();
+console.log(res1);

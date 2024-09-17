@@ -14,10 +14,8 @@ function findMethod(arr) {
 }
 console.log("findMethod--->", findMethod(arr));
 //console.log("findMethod--->", findMethod(arr1)); // { id: 1, name: 'krishna' }
-
 //findIndex Method:
 //It will return the index of first element of an array that passes the specified condition.
-
 function findMethod(arr) {
 	let res = arr.findIndex((x) => {
 		return x.id > 3;
@@ -31,7 +29,6 @@ console.log("find Index Method--->", findMethod(arr1));
 //and returns undefined if none of the elements passed the condition.
 //FindIndex() will return the index of the first element based on the condition
 //and returns -1 if none of the elements passed the condition.
-
 /* let a = true;
 setTimeout(() => {
     a = false;

@@ -9,4 +9,7 @@ function stringReverse(str) {
   }
   return s.join("");
 }
-console.log("Reverse String ::: ", stringReverse("NewList"));
+//console.log("Reverse String ::: ", stringReverse("NewList"));
+console.time("stringReverse");
+console.log(stringReverse("NewList"));
+console.timeEnd("stringReverse");

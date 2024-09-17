@@ -1,30 +1,58 @@
+// Memoization utility function
 function memoize(fn) {
-	const cache = {};
-	return function (...args) {
-		const key = JSON.stringify(args);
-		if (!(key in cache)) {
-			cache[key] = fn(...args);
-		}
-		return cache[key];
-	};
+  const cache = {}; // Object to store computed results
+  return function (...args) {
+    // Convert the arguments array into a string to use as the cache key
+    const key = JSON.stringify(args);
+    // Check if the result is already cached
+    if (cache[key]) {
+      return cache[key]; // Return cached result
+    } else {
+      const res = fn(...args); // Compute the result
+      cache[key] = res; // Store the result in the cache
+      return res; // Return the computed result
+    }
+  };
 }
-const sum = memoize(function (a, b) {
-	return a + b;
-});
-const fib = memoize(function (n) {
-	if (n <= 1) {
-		return 1;
-	}
-	return fib(n - 1) + fib(n - 2);
-});
-const factorial = memoize(function (n) {
-	if (n <= 1) {
-		return 1;
-	}
-	return factorial(n - 1) * n;
-});
-// Example usage
-console.log(sum(2, 3)); // Output: 5
-console.log(sum(3, 2)); // Output: 5 (Different order, separate call)
-console.log(fib(5)); // Output: 8
-console.log(factorial(4)); // Output: 24
+
+// Function to add two numbers
+function add(a, b) {
+  return a + b;
+}
+
+// Function to subtract two numbers
+function subtract(a, b) {
+  return a - b;
+}
+
+// Function to multiply two numbers
+function multiply(a, b) {
+  return a * b;
+}
+
+// Memoize all the functions
+const addMemoized = memoize(add);
+const subtractMemoized = memoize(subtract);
+const multiplyMemoized = memoize(multiply);
+
+// Example usage of memoized functions
+// Adding
+console.time("addMemoized(4, 5)");
+console.log("Add (4, 5):", addMemoized(4, 5)); // Output: 9
+console.timeEnd("addMemoized(4, 5)");
+console.time("addMemoized(4, 5)");
+console.log("Add Second Call", addMemoized(4, 5)); // Output: 9
+console.timeEnd("addMemoized(4, 5)");
+// Subtracting
+console.time("subtractMemoized(10, 3)");
+console.log("Subtract (10, 3):", subtractMemoized(10, 3)); // Output: 7
+console.timeEnd("subtractMemoized(10, 3)");
+
+// Multiplying
+console.time("multiplyMemoized(6, 7)");
+console.log("Multiply (6, 7):", multiplyMemoized(6, 7)); // Output: 42
+console.timeEnd("multiplyMemoized(6, 7)");
+
+console.time("multiplyMemoized(6, 7)");
+console.log("Multiply Second Call ", multiplyMemoized(6, 7)); // Output: 42
+console.timeEnd("multiplyMemoized(6, 7)");
