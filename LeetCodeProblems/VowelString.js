@@ -23,7 +23,7 @@ console.log("revVowelString-->", revVowelString("ihellou")); // uhollei
 function stringReverse(str) {
   const s = str.split("");
   let i = 0;
-  let j = s.length;
+  let j = s.length-1;
   while (i < j) {
     [s[i], s[j]] = [s[j], s[i]];
     i++;
