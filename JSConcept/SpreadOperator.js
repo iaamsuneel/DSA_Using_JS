@@ -4,7 +4,6 @@ const newArr = [].concat(...arr);
 console.log(newArr); */
 /* const obj = { firstName: "Lydia", lastName: "india" };
 const { firstName, lastName } = obj;
-
 console.log(firstName, lastName); */
 const obj = {};
 arr = [];

@@ -23,10 +23,8 @@ console.log("-->", person.fullName());
 Because this is running in the global scope. */
 let x = this;
 console.log("this-->", this);
-
 function value() {
 	let a = 10;
 	return this.a;
 }
-
 console.log("value-->", value);
