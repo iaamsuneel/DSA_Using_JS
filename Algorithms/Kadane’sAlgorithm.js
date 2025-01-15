@@ -47,7 +47,7 @@ const maxSubarraySum = (arr) => {
   let maxSum = arr[0];
   for (let i = 0; i < arr.length; i++) {
     currentSum = arr[i] + currentSum;
-    console.log("i->currentSum->maxSum ", i, currentSum, maxSum);
+    // console.log("i->currentSum->maxSum ", i, currentSum, maxSum);
     if (maxSum < currentSum) {
       maxSum = currentSum;
     }

@@ -2,12 +2,12 @@
 // Sum of two linked list.
 // Find range max element in array
 // find the kth element in the sorted 2-D matrix.
-// Sort colors
+// Sort colors -- done
 // Construct Binary Tree from Preorder and Postorder.
 // Word Break from Leetcode
 // Quick Sort ---> WPA
 // mean for stream of numbers
-// Given an array of integers and find the maximum sum subarray.
+// Given an array of integers and find the maximum sum subarray - Done
 // String and dictionary based easy question
 // Write an algorithm to find the median of a stream of flowing numbers. Then optimize it.
 // minimum no of operations required to convert word A to word B using 
@@ -25,6 +25,17 @@
 // write a program to find max sum of contiguous elements from an array
 // stack memory and heap space
 // mean for stream of numbers
+//  new list    //  
+// 1. Longest Palindromic Subsequence
+// 2. Merge Two Sorted Linked Lists
+// 3. Check If One String Is A Rotation Of Another String
+// 4. Next Greater Element
+//2. https://leetcode.com/problems/two-sum/
+//3. https://leetcode.com/problems/path-with-minimum-effort/
+// nth-node-from-the-end-of-a-linked-list/
+// longest-substring-without-repeating-characters/description/
+
+
 
 
 

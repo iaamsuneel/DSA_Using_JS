@@ -17,3 +17,4 @@ var searchRange1 = function (nums, target) {
 console.log("Example 1:- ", searchRange1([5, 7, 7, 8, 8, 10], 8));
 console.log("Example 2:- ", searchRange1([5, 7, 7, 8, 8, 10], 6));
 console.log("Example 3:- ", searchRange1([1], 1));
+// another approach
