@@ -1,0 +1,119 @@
+Array Problem Solving Techniques:
+1.Two-pointer technique:
+
+Used to solve problems where you need to traverse the array from both ends or compare elements at different positions.
+Example: Find a pair of elements that sum up to a target value (e.g., two-sum problem).
+Time complexity: O(n)
+Sliding Window:
+
+Helps with problems that require examining contiguous subarrays or substrings.
+You maintain a "window" of elements and adjust its size to optimize.
+Example: Find the maximum sum of k consecutive elements in an array.
+Time complexity: O(n)
+Binary Search:
+
+Used for sorted arrays to find elements or ranges quickly.
+Example: Find the index of an element in a sorted array or the first/last occurrence of an element.
+Time complexity: O(log n)
+Sorting:
+
+Sorting can simplify many array problems (e.g., finding duplicates, closest pairs, etc.).
+Example: Sort the array to find duplicates or solve a two-pointer problem.
+Time complexity: O(n log n)
+Prefix/Suffix Sum:
+
+Used to quickly calculate the sum of elements in any subarray.
+Example: Calculate the sum of any subarray in constant time after preprocessing.
+Time complexity: O(n) for preprocessing, O(1) for querying.
+Hashing:
+
+Used to store elements in a hash map (dictionary) for quick look-up, which is ideal for problems involving duplicates, counts, or frequent access.
+Example: Find duplicates in an array, or count the frequency of elements.
+Time complexity: O(n) for both space and time complexity.
+Dynamic Programming (DP):
+
+Used for problems that involve breaking the problem into smaller subproblems that can be solved independently.
+Example: Find the maximum sum of a subarray (Kadane’s Algorithm), longest increasing subsequence.
+Time complexity: Depends on the problem (e.g., O(n), O(n^2)).
+Greedy Algorithms:
+
+Make locally optimal choices at each step with the hope of finding a global optimum.
+Example: Find the minimum number of coins for a given amount (coin change problem).
+Time complexity: Varies based on the problem (typically O(n log n)).
+Backtracking:
+
+Involves exploring all possible solutions and "backtracking" when a solution doesn't work.
+Example: Solving the N-Queens problem, or finding all possible subsets of an array.
+Time complexity: Typically exponential.
+Heap/Priority Queue:
+
+Used to efficiently access the maximum or minimum element.
+Example: Find the k largest or smallest elements in an array.
+Time complexity: O(n log k) for heap-based approaches.
+Object Problem Solving Techniques:
+Hashing:
+
+Objects are often used as a key-value pair data structure. Hash maps (or dictionaries) are particularly useful for quick lookups, counting, and storing associations.
+Example: Count the frequency of characters in a string, or check for anagrams.
+Time complexity: O(1) for average insert and lookup.
+Deep Copy vs. Shallow Copy:
+
+When dealing with objects, understanding when to copy an object vs. reference it is important to avoid unintended side effects.
+Example: Modify an object without affecting the original object.
+Time complexity: Shallow copy is O(n); deep copy can be more complex depending on the structure.
+Destructuring and Rest/Spread Operators:
+
+Allows for concise access to object properties and manipulation of object structures.
+Example: Extract specific properties from an object or merge objects easily.
+Time complexity: O(n) for extracting keys/values.
+Object Property Lookup and Access:
+
+You can use dot notation or bracket notation to access values from objects.
+Example: Retrieve specific data from an object or nested object.
+Time complexity: O(1) for direct property lookup.
+Memoization:
+
+Caching previously computed values to avoid redundant computations.
+Example: Store results of expensive function calls (especially in recursive problems).
+Time complexity: O(1) for cache lookup.
+Object Iteration:
+
+Iterating over object properties using Object.keys(), Object.values(), or Object.entries() can help in problem solving.
+Example: Find the object property with the maximum value, or filter an object based on conditions.
+Time complexity: O(n) for iterating through the object's properties.
+Set Operations:
+
+Sets are useful when you need to track unique values in an object (especially when dealing with collections of data).
+Example: Remove duplicates from an array or object, find the intersection of multiple sets.
+Time complexity: O(1) for insertion and lookup.
+Flattening Nested Objects:
+
+In cases where you have deeply nested objects, flattening them can simplify problem solving.
+Example: Flatten a nested object to extract a specific piece of data.
+Time complexity: O(n), where n is the number of keys in the object.
+Transformation and Mapping:
+
+Use map(), filter(), or reduce() (in functional programming) to transform or manipulate object properties.
+Example: Convert an object to a different structure or filter out certain properties.
+Time complexity: Typically O(n) for operations on object properties.
+Immutability:
+
+When manipulating objects, sometimes it's important to maintain immutability (not directly modifying the original object).
+Example: Use Object.assign(), spread operators, or Object.freeze() to create immutable objects.
+Time complexity: O(n) for operations on objects.
+Combined Array & Object Problem Solving Techniques:
+Map Objects:
+
+Use objects to represent an array's value counts or other properties.
+Example: Count the frequency of each element in an array using an object.
+Time complexity: O(n) for both space and time complexity.
+Group By:
+
+Group elements from an array into an object based on a specific condition.
+Example: Group users by country or group products by category.
+Time complexity: O(n)
+Sorting Objects/Arrays:
+
+Sort arrays of objects based on specific keys or values.
+Example: Sort a list of objects by a particular property (e.g., sort students by their grades).
+Time complexity: O(n log n) for sorting.

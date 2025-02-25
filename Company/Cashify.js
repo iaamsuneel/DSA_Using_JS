@@ -40,7 +40,7 @@ const nestedObj = {
   b: {
     c: 2,
     d: {
-      e: 3,
+      e: [3, 5],
       f: 4,
     },
   },
@@ -50,9 +50,7 @@ const nestedObj = {
 const flattenObject = (obj, parentKey = "", result = {}) => {
   for (const ele of Object.entries(obj)) {
     const [key, value] = ele;
-    console.log("key, value", ele);
     const newKey = parentKey ? `${parentKey}_${key}` : key;
-    console.log("newKey", newKey, typeof value);
     if (typeof value === "object" && value !== null) {
       flattenObject(value, newKey, result);
     } else {
