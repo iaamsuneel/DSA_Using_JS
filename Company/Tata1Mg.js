@@ -5,7 +5,7 @@
 // Sort colors -- done
 // Construct Binary Tree from Preorder and Postorder.
 // Word Break from Leetcode
-// Quick Sort ---> WPA
+// Quick Sort ---> WAP
 // mean for stream of numbers
 // Given an array of integers and find the maximum sum subarray - Done
 // String and dictionary based easy question

@@ -61,3 +61,13 @@ const maxSubarraySum = (arr) => {
 console.log(maxSubarraySum([-2, 1, -3, 4, -1, 2, 1, -5, 4])); // Output: 6
 /* console.log(maxSubarraySum([1, 2, 3, 4])); // Output: 10
 console.log(maxSubarraySum([-1, -2, -3, -4])); // Output: -1 */
+
+/* 1524. Number of Sub-arrays With Odd Sum
+Given an array of integers arr, return the number of subarrays with an odd sum.
+
+Since the answer can be very large, return it modulo 109 + 7. */
+
+var numOfSubarrays = function (arr) {
+  
+};
+console.log("Result :: ", numOfSubarrays([1, 3, 5]));
