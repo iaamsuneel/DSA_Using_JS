@@ -69,6 +69,4 @@ Coding Round Question :->
 49.  implement a binary search tree and find the average of each level. They also asked questions based on Array List and Snake and Ladders game 
 50.  level order traversal of binary tree 
 51.  max length of the palindrome string from a given string. eg - aabcbcd ans- 7 2) a string is given with 1, 0 and *. you have to replace all the star with 1 and 0 and print all the possible combination.
-
-
  */

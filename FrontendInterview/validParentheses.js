@@ -5,8 +5,7 @@ An input string is valid if:
 Open brackets must be closed by the same type of brackets.
 Open brackets must be closed in the correct order.
 Every close bracket has a corresponding open bracket of the same type. */
-let s = "()[]{()}";
-function isCheckValidParentheses() {
+function isCheckValidParentheses(s) {
   const stack = [];
   const pairs = {
     "(": ")",
@@ -22,4 +21,5 @@ function isCheckValidParentheses() {
   }
   return stack.length === 0;
 }
-console.log("isCheckValidParentheses :: ", isCheckValidParentheses(s));
+console.log("isCheckValidParentheses :: ", isCheckValidParentheses("(){[)]})"));
+console.log("isCheckValidParentheses :: ", isCheckValidParentheses("(){[]}"));
