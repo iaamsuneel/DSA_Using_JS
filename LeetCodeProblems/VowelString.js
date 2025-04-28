@@ -18,4 +18,3 @@ const revVowelString = (s) => {
 };
 console.log("revVowelString-->", revVowelString("leetcode")); // leotcede
 console.log("revVowelString-->", revVowelString("ihellou")); // uhollei
-

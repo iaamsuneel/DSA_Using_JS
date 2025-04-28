@@ -1,0 +1,34 @@
+// ES6 features & latest ones Promise
+// Function Prototype Function binding Type of Object Prototype Array prototype
+// What is Doctype, semantic elements, user strict in js, Pseudo-classes, Promise, grid vs flex,
+// 2-3 and programing questions- what is the output of the program
+// Currying, Closure, let, var, IIFE, Promises.
+// Asked Basic questions like CSS selector, Callback, Promise, box model in css, 
+//semantic elements, 
+//user strict in js, What is Doctype, Async/Await, CSS Specificity.
+                                 
+                                <--------CSS ------->
+                                    Basic CSS 
+             CSS: How do you center the div center horizontally and vertically. -> Done
+             Css box model, Display and Position property.  
+             Css Specificity and how to calculate.
+                                <-------- Javascript ------->
+
+                        Javascript: what is the difference bet. 
+                        normal function and Arrow function array.map method.
+                     diff. let, var, const. how to create object in JS. 
+                     object.seal and freeze method Event Propagation in js.
+                     IIFE what is prototype and 
+                     how to achieve inheritance in JS.
+                      array methods[sort, slice, splice, reverse, split, join] */
+
+// about React Life Cycle Methods.
+
+// 1. string based question.
+// 2.sort the array which contain either 0 ,1 or 2 .
+  It was dp based question little bit difficult and it was based on subarray concept 
+  . 2nd round: You have given two sorted linked list you have to find the median of sorted merge linked list which does not contain any duplicate element. 
+  If it has odd number of nodes in merged linked list then 
+  return middle one and if it contain even number of nodes then return avg of middle nodes.
+   2.Rotate the array k times and return the same array in O(n) time. */
+// Sorting algorithm, search algorithms and other technology
