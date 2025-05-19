@@ -32,3 +32,58 @@
   return middle one and if it contain even number of nodes then return avg of middle nodes.
    2.Rotate the array k times and return the same array in O(n) time. */
 // Sorting algorithm, search algorithms and other technology
+
+
+// I applied through careers page then recruiter mail me and scheduled the interview.
+
+ There were 2 rounds : first round having conceptual and debugging question 
+ related to js, reactjs, html and css and one easy level coding problem that went around 1hr.
+  Then in 2nd round, same asked the question from the same topic and 
+  also gave task in css and same one pretty simple coding problem.
+
+  // debouncing, throttling, hoisting, promise, async/await, class vs functional based component,
+   hooks, position property, pseudo classes & element, flex. 
+   Output based question from hoisting, closure,
+    flatten an array and some basis js concept.
+     One coding question: find the duplicate element from an array.
+
+
+     // They never explain you or provide any sort of information
+      which might help you in the interview rounds, 
+      Like I was never given any info what might the first or
+       the second round of interview will be based on My experience was overall average
+        Like 1st round was quite basic they asked me questions on javascript and react.js 
+        in which i was told to reverse a string in 3 ways (which was easy to do)
+         the interviewer was very understandable and she even helped me
+          once to clearly solve the problem. But, 
+          in the second round, it felt like as 
+          if the interviewer is working on a grudge to not hire 
+          any candidates (like neither he clarified what he's asking me,
+           nor he even dignified any of my responses) like firstly 
+           he asked me a normal problem on a design part where some data is coming from the backend
+            and how will i manage to render that data making sure the 
+            design doesn't break (quite simply i have would 
+            
+            i have implemented flexbox and a small javascript algo to limit the number of characters rendering)
+             but he rejected my response and said ki you could have 
+             used flexbox only (like no additional answer was required as to showcase my proficiency)
+              then he argued with me regarding on a very basic question related to REM and EM values in css
+            i did give him the proper definition( but my guess he already had an another response in his mind )
+             based on these few basic questions he rejected me.
+
+
+
+
+             ////////////
+             semantic html tags and element
+             box model
+             useeffect, usememo
+             redux
+             react hook
+           input -  aaabbcdd o/p - a3 b2 c1 d2
+           project detail 
+           responsive css
+           let var const 
+           async/await 
+           useeffect life Cycle 
+           

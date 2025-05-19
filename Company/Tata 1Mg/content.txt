@@ -1,0 +1,22 @@
+✅ 1. JavaScript (Core + Advanced)
+Closures, hoisting, this, event loop, promise/microtask queue, async/await
+Array/Object methods: map, filter, reduce, forEach, some, every
+Event delegation, bubbling/capturing
+Debounce & Throttle
+Shallow vs Deep copy
+Prototypal inheritance and Object.create
+Writing pure functions and avoiding side effects
+
+✅ 2. HTML & Accessibility
+Semantic tags: <article>, <section>, <aside>, etc.
+Forms: input types, label, accessibility attributes (aria-*)
+SEO-relevant tags: <title>, <meta>, heading hierarchy
+Best practices for accessibility (alt text, keyboard navigation)
+
+✅ 3. CSS & Layouts
+Flexbox, Grid (important!)
+Box model, stacking context, z-index
+Responsive design: media queries, mobile-first
+Specificity & !important
+Positioning: static, relative, absolute, fixed, sticky
+Animations with transition, @keyframes

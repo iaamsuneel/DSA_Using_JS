@@ -1,4 +1,4 @@
-var countFairPairs = function (nums, lower, upper) {
+const countFairPairs = function (nums, lower, upper) {
   let count = [];
   let i = 0,
     j = nums.length;

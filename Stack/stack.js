@@ -1,4 +1,4 @@
-class stack {
+class Stack {
   constructor() {
     this.items = [];
   }
@@ -21,12 +21,12 @@ class stack {
     return this.items.length;
   }
   printStack() {
-    var str = "";
+    let str = "";
     for (var i = 0; i < this.items.length; i++) str += this.items[i] + " ";
     return str;
   }
 }
-const stackArray = new stack();
+const stackArray = new Stack();
 stackArray.push(2);
 stackArray.push(8);
 stackArray.push(19);

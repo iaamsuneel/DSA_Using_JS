@@ -16,7 +16,7 @@ function isCheckAnagram(str1, str2) {
 }
 console.log("isCheckAnagram :::: ", isCheckAnagram("ans", "nad"));
 // Find All Anagrams in String
-var findAnagrams = function (s, p) {
+const findAnagrams = function (s, p) {
   let n = p.length;
   let count = 0;
   let res = [];
@@ -24,15 +24,12 @@ var findAnagrams = function (s, p) {
   for (let i = 0; i < s.length; i++) {
     if (p.includes(s[i]) && count !== n) {
       count = count + 1;
-      console.log("first", s[i], count);
     } else if (count == n && isChecked) {
-      console.log("else if");
       let val = i - n;
       isChecked = false;
       res.push(val);
       count = 1;
     } else {
-      console.log("eleeee");
       count = 0;
     }
   }

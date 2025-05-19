@@ -28,7 +28,7 @@ const map = new Map();
 // adding and Updating Key-Value Pairs
 map.set("key1", 200);
 map.set("key2", 400);
-map.set("key2", 100);
+map.set("key", 100);
 map.set("key3", 300);
 map.set("key4", 1700);
 console.log("map", map);

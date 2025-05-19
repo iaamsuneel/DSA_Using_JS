@@ -1,5 +1,5 @@
 // Tata 1mg
-var searchRange1 = function (nums, target) {
+const searchRange1 = function (nums, target) {
   let first = -1;
   let last = -1;
   for (let i = 0; i < nums.length; i++) {

@@ -14,3 +14,4 @@ function isAnagram(s1, s2) {
     return true;
 }
 console.log(isAnagram("anagram", "nagaram"));
+console.log(isAnagram("anagram", "nagaraa"));
