@@ -16,6 +16,26 @@ When you need to optimize brute force solutions for better time complexity. */
 used for solving various problems that involve processing or analyzing 
 a sequential data structure, such as arrays, strings, or streams. */
 
+// General Sliding Window Template:
+/* function slidingWindowExample(str) {
+  let left = 0;
+  let result = 0;
+  let window = new Map(); // or Set or Object depending on use-case
+  for (let right = 0; right < str.length; right++) {
+    let char = str[right];
+    // Expand window
+    // Update window state with str[right]
+   // while ( window violates condition ) {
+      // Shrink window from the left
+      // Update window state by removing str[left]
+     // left++;
+    //}
+    // Update result (e.g., max length, count, etc.)
+   // result = Math.max(result, right - left + 1);
+  //}
+ // return result;
+//} 
+
 // Examples
 // Ques 4: Sliding Window Maximum
 // You are given an array of integers nums, there is a sliding window of size k which is
@@ -32,7 +52,6 @@ function maxSlidingWindow(nums, k) {
   for (i = 0; i <= n - k; i++) {
     let max = nums[i];
     for (j = 1; j < k; j++) {
-      console.log("j", nums[j], nums[i + j]);
       if (nums[i + j] > max) {
         max = nums[i + j];
       }
@@ -106,7 +125,7 @@ function lengthOfLongestSubstring(str) {
   return maxLength;
 }
 console.log("lengthOfLongestSubstring", lengthOfLongestSubstring("abcabcbb"));
-var findMaxAverage = function (nums, k) {
+const findMaxAverage = function (nums, k) {
   let max = 0,
     start = 0,
     maxWindowAve = 0;

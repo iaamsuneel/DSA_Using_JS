@@ -2,7 +2,6 @@ class SlidingWindow {
   // Brute Force Approach - O(n * k)
   findMaxAverageBruteForce(nums, k) {
     let maxAvg = -Infinity;
-
     for (let i = 0; i <= nums.length - k; i++) {
       let sum = 0;
       for (let j = i; j < i + k; j++) {
@@ -12,17 +11,14 @@ class SlidingWindow {
     }
     return maxAvg;
   }
-
   // Sliding Window Approach - O(n)
   findMaxAverageSlidingWindow(nums, k) {
     let sum = nums.slice(0, k).reduce((a, b) => a + b, 0);
     let maxSum = sum;
-
     for (let i = k; i < nums.length; i++) {
       sum += nums[i] - nums[i - k];
       maxSum = Math.max(maxSum, sum);
     }
-
     return maxSum / k;
   }
 
@@ -31,7 +27,6 @@ class SlidingWindow {
     let seen = new Set();
     let maxLength = 0,
       left = 0;
-
     for (let right = 0; right < s.length; right++) {
       while (seen.has(s[right])) {
         seen.delete(s[left]);
@@ -42,21 +37,17 @@ class SlidingWindow {
     }
     return maxLength;
   }
-
   // Sliding Window using Frequency Array
   lengthOfLongestSubstringSlidingWindowFrequencyArray(s) {
     let freq = new Array(128).fill(0);
     let maxLength = 0,
       left = 0;
-
     for (let right = 0; right < s.length; right++) {
       freq[s.charCodeAt(right)]++;
-
       while (freq[s.charCodeAt(right)] > 1) {
         freq[s.charCodeAt(left)]--;
         left++;
       }
-
       maxLength = Math.max(maxLength, right - left + 1);
     }
     return maxLength;

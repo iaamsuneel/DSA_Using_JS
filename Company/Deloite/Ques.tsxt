@@ -87,3 +87,64 @@
            async/await 
            useeffect life Cycle 
            
+
+
+
+
+
+My JavaScript/Frontend Interview Experience – Real Questions I Was Asked
+
+⸻
+
+JavaScript – Theory Questions
+	1.	What is hoisting in JavaScript?
+	2.	Explain closures in JavaScript.
+	3.	What is the event loop in JavaScript?
+	4.	Difference between var, let, and const.
+	5.	Difference between == and ===.
+	6.	What is the output of:
+	•	1 == true
+	•	0 == false
+	•	0 === false
+	7.	What is destructuring in JavaScript?
+	8.	What is the difference between rest and spread operators?
+	9.	When and why should we use <script> in the <head> tag?
+	10.	Difference between defer and async in <script> loading.
+
+⸻
+
+HTML & CSS – Theory Questions
+	11.	Why do we add <!DOCTYPE html> to HTML files?
+	12.	What happens if we don’t use a doctype?
+	13.	What is quirks mode?
+	14.	What are the different CSS position values?
+	15.	Difference between relative and absolute positions.
+	16.	If a parent is absolute and the child is also absolute, how is the child positioned?
+	17.	If a parent is absolute and the child is relative, how is the child positioned?
+
+⸻
+
+JavaScript – Coding Questions
+	18.	Can you clone an object in JavaScript?
+	19.	How can you create a shallow copy of an object?
+	20.	Simple example of using the rest operator.
+	21.	How to get the second largest value in an array?
+	22.	Give an optimized approach to find the second largest number.
+
+⸻
+
+Image-Based Coding/Conceptual Questions (from whiteboard or paper)
+	23.	Output-based questions involving:
+
+	•	console.log(typeof null)
+	•	console.log(typeof [])
+	•	console.log(typeof NaN)
+	•	typeof operator behavior in tricky cases
+
+	24.	Code behavior questions involving:
+
+	•	Closures and variable scoping
+	•	Asynchronous code execution
+	•	Event loop + microtask/macrotask execution order
+
+	25.	Object reference and memory behavior (shallow vs deep copy questions)
