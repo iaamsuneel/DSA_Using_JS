@@ -48,12 +48,26 @@ console.log(b === c);  */
 
 ("5.Question");
 const num = parseInt("7*2");
-console.log(num); // 7
+//console.log(num); // 7
 
 ("6.Question");
 const arr = [1, 2, 3];
 const res = arr.map((num) => {
-	if (typeof num === "number") return;
-	return num * 2;
+  if (typeof num === "number") return;
+  return num * 2;
 });
-console.log(res); // [ undefined, undefined, undefined ]
+//console.log(res); // [ undefined, undefined, undefined ]
+
+("7 .Question"); // closure
+function outer() {
+  let count = 0;
+  return function inner() {
+    return count++;
+  };
+}
+const fn_1 = outer();
+const fn_2 = outer();
+console.log("fn_1", fn_1()); // Output: fn_1 0
+console.log("fn_1", fn_1()); // Output: fn_1 1
+console.log("fn_2", fn_2()); // Output: fn_2 0
+console.log("fn_2", fn_2()); // Output: fn_2 1

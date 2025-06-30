@@ -59,7 +59,6 @@ console.log("Two Sum Using Map:: ", twoSum1([3, 3], 6)); // [0, 1]
 console.log("Two Sum Using Map :: ", twoSum1([2, 7, 11, 15], 9)); // [0, 1]
 console.log("Two Sum Using Map :: ", twoSum1([3, 2, 4], 6)); // [1, 2]
 
-
 const fourSum = (arr, target) => {
   const res = [];
   arr.sort((a, b) => a - b);
@@ -117,3 +116,24 @@ console.log("threeSumTwoPointer : ", threeSumTwoPointer([-1, 0, 1, 2, -1, -4]));
 console.log("threeSumTwoPointer : ", threeSumTwoPointer([0, 0, 0])); // [0,0,0]
 console.log("threeSumTwoPointer : ", threeSumTwoPointer([0, 1, 1])); // []
 console.log("threeSumTwoPointer : ", threeSumTwoPointer([3, 0, -2, -1, 1, 2])); // [[-2,-1,3],[-2,0,2],[-1,0,1]]
+
+function threeSumMultipiiCity(arr, target) {
+  let count = 0;
+  arr.sort((a, b) => a - b);
+  for (let i = 0; i < arr.length; i++) {
+    // if (i > 0 && arr[i] === arr[i - 1]) continue;
+    let left = i + 1;
+    let right = arr.length - 1;
+    while (left < right) {
+      let sum = arr[i] + arr[left] + arr[right];
+      if (sum === target) {
+        count++;
+        left++;
+        right--;
+      } else if (sum < target) left++;
+      else right--;
+    }
+  }
+  return count;
+}
+console.log(threeSumMultipiiCity([1, 1, 2, 2, 3, 3, 4, 4, 5, 5], 8));

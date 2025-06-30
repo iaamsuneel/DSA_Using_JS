@@ -41,7 +41,6 @@ function lengthOfLongestSubstringOpti(str) {
     maxLength = 0;
   for (let right = 0; right < str.length; right++) {
     while (charSet.has(str[right])) {
-        console.log('charSet',charSet)
       charSet.delete(str[left]);
       left++;
     }
