@@ -31,7 +31,6 @@ function rotateLeft(arr, k) {
 
   // Step 2: Reverse the remaining 'n-k' elements
   reverse(arr, k, n - 1); // Example: [2,1,3,4,5] -> [2,1,5,4,3]
-
   // Step 3: Reverse the entire array
   reverse(arr, 0, n - 1); // Example: [2,1,5,4,3] -> [3,4,5,1,2]
 

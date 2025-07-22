@@ -1,12 +1,10 @@
-const nextArray = (arr) => {
-  const res = [];
-  for (let ele of arr) {
-    if (Array.isArray(ele)) {
-      res.push(...nextArray(ele));
-    } else {
-      res.push(ele);
-    }
-  }
-  return res;
-};
-console.log(nextArray([1, 2, [2, 3, [3, 4, [5, 9]]], 8]));
+//Input: matrix = [[1,1,1],[1,0,1],[1,1,1]]
+//Output: [[1,0,1],[0,0,0],[1,0,1]]
+function matrixZeroes(arr) {}
+console.log(
+  matrixZeroes([
+    [1, 1, 1],
+    [1, 0, 1],
+    [1, 1, 1],
+  ])
+);
