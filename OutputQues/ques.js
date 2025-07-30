@@ -1,11 +1,15 @@
-const list = [
-  { id: 1, name: "Suneel" },
-  { id: 2, name: "Sushu" },
-  { id: 3, name: "pooja" },
-];
-const res = list.filter((item) => [1, 3].includes(item.id));
-const res1 = list
-  .filter((item) => [1, 3].includes(item.id))
-  .map((item) => item.name);
-
-console.log(res, "res1--->", res1.join(","));
+function curringSum(a) {
+  return function (b) {
+    if (b !== undefined) {
+      return sum(a + b);
+    }
+    return a;
+  };
+}
+function sum(a) {
+  return function (b) {
+    return a + b;
+  };
+}
+const res = curringSum(1)(2)(4)();
+console.log(res);

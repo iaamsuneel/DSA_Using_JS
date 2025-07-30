@@ -53,6 +53,19 @@ function searchElement(arr, key) {
   }
   return -1;
 }
-console.time("searchElement");
 console.log(searchElement([2, 4, 6, 7, 9, 11, 27], 11));
-console.timeEnd("searchElement");
+// Problem: 2  Find Peak Element
+function peakElement(nums) {
+  let left = 0;
+  let right = nums.length - 1;
+  while (left < right) {
+    let mid = Math.floor((left + right) / 2);
+    if (nums[mid] < nums[mid + 1]) {
+      left = mid + 1;
+    } else {
+      right = mid;
+    }
+  }
+  return left;
+}
+console.log("Find Peak Element:: ", peakElement([1, 2, 1, 3, 5, 6, 4]));
