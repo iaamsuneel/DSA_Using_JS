@@ -163,3 +163,7 @@ Question 1
 2nd round: Focused on Next.js fundamentals,
 including routing, data fetching, and component structure.
 Overall: Core concepts tested efficiently.
+
+
+# JSX: JavaScript XML
+JSX is a syntax extension for JavaScript that allows you to write HTML-like code in React/JavaScript files. It combines the power of JavaScript with the expressiveness of markup.

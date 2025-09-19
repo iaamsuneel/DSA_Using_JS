@@ -109,7 +109,7 @@ const p1 = Promise.resolve(1);
 const p2 = Promise.resolve(2);
 const p3 = new Promise((resolve) => setTimeout(() => resolve(3), 100));
 
-myPromiseall(p1, p2, p3)
+myPromiseall([p1, p2, p3])
   .then((res) => {
     console.log("Result :::", res);
   })

@@ -8,6 +8,8 @@ function add(a) {
   };
 }
 console.log(add(2)(3)(9)(29)(9)());
+
+// Case 2.
 function curry(fn) {
   return function curried(...args) {
     if (args.length >= fn.length) {
@@ -23,7 +25,7 @@ function sum(a, b, c) {
 }
 const curriedSum = curry(sum);
 console.log(curriedSum(1)(2)(3)); // 6
-console.log(curriedSum(1, 2)(3));
+console.log(curriedSum(1, 2)(3)); // 6
 // implement this code
 // asked Question in Car24
 const calculate = {
@@ -41,7 +43,6 @@ const calculate = {
     return this;
   },
 };
-
 const result = calculate.add(10).multiply(5).subtract(30).add(10).multiply(2);
 //console.log("result-->", result.total);
 function createCalculator() {

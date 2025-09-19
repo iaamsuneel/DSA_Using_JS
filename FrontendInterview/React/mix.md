@@ -25,3 +25,25 @@ return <button onClick={() => setCount(count + 1)}>Count: {count}</button>;
    }
    // Usage:
    <Greeting name="Alice" />
+
+
+
+  #  👉 What is code splitting in JavaScript/Webpack, and how can we use it in React?
+
+📌 Answer:
+Code splitting is the process of splitting JavaScript bundles into smaller chunks so the browser loads only the required code instead of everything at once. This makes apps load faster and improves performance.
+
+⚡ In Webpack:
+-Dynamic Imports (import()) → Load modules only when needed.
+-SplitChunksPlugin → Extract common dependencies.
+-Multiple Entry Points → Create separate bundles.
+
+⚛️ In React:
+React provides React.lazy + Suspense for component-level code splitting.
+Example:
+
+const Profile = React.lazy(() => import('./Profile'));
+
+<Suspense fallback={<div>Loading...</div>}>
+ <Profile />
+</Suspense>
