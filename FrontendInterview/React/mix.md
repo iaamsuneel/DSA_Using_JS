@@ -47,3 +47,38 @@ const Profile = React.lazy(() => import('./Profile'));
 <Suspense fallback={<div>Loading...</div>}>
  <Profile />
 </Suspense>
+
+
+
+# React.memo
+What it is: A higher-order component that memoizes the rendered output of a component.
+Why use it: Prevents unnecessary re-renders if props don’t change.
+Example:
+const Child = React.memo(({ value }) => {
+  console.log("Child Rendered");
+  return <div>{value}</div>;
+});
+👉 If value doesn’t change, Child won’t re-render.
+
+# Code Splitting
+What it is: Breaking your app bundle into smaller chunks instead of loading everything at once.
+Why use it: Improves initial load time by loading only the required code.
+How: Using dynamic import() or React.lazy + Suspense.
+Example:
+import React, { Suspense } from "react";
+const Chart = React.lazy(() => import("./Chart"));
+function App() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <Chart />
+    </Suspense>
+  );
+}
+
+# Lazy Loading
+What it is: A technique to delay loading of non-critical resources until they are actually needed.
+Why use it: Reduces initial load time and improves performance.
+Use cases:
+Lazy load components (React.lazy)
+Lazy load images with loading="lazy" in <img> tag.
+<img src="big-image.jpg" alt="demo" loading="lazy" />
