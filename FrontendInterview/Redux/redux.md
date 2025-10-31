@@ -1,6 +1,4 @@
-                            // Redux
-
-
+                             Redux
 Redux is a state management library for JavaScript applications, including React.
 It provides a centralized store to hold application state,
 actions to update that state, and reducers to handle those updates.

@@ -105,3 +105,7 @@ class Dog implements Animal {
 const d = new Dog();
 d.sound(); // Woof!
 # 👉 Classes naturally implement interfaces, not types.
+
+
+
+ 

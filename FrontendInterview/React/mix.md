@@ -66,7 +66,7 @@ Why use it: Improves initial load time by loading only the required code.
 How: Using dynamic import() or React.lazy + Suspense.
 Example:
 import React, { Suspense } from "react";
-const Chart = React.lazy(() => import("./Chart"));
+# const Chart = React.lazy(() => import("./Chart"));
 function App() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
@@ -82,3 +82,28 @@ Use cases:
 Lazy load components (React.lazy)
 Lazy load images with loading="lazy" in <img> tag.
 <img src="big-image.jpg" alt="demo" loading="lazy" />
+
+
+ # React Fiber – The Core of Modern React
+React Fiber is the reconciliation engine of React, introduced in React 16. It completely re-implemented React’s core algorithm to make rendering more flexible, efficient, and interruptible.
+✨ Key points about React Fiber:
+It allows React to pause, resume, and prioritize rendering work.
+Enables features like Concurrent Mode & Suspense.
+Improves UI responsiveness by splitting rendering work into chunks.
+Makes React apps faster and smoother, especially with complex UIs.
+In simple terms: Fiber makes React feel more “reactive.”
+
+# React Interview Ques – useMemo vs useCallback
+Both useMemo and useCallback are React hooks for performance optimization, but they serve different purposes ->
+🔹 useMemo->
+ •Returns a memoized value
+ •Used when you want to avoid recomputing expensive calculations
+ •Example: caching derived data like filtered lists, computed totals, etc.
+🔹 useCallback->
+ •Returns a memoized function
+ •Used when you want to avoid re-creating functions unnecessarily
+ •Example: passing a stable function as a prop to child components
+👉 In short:
+useMemo → memoizes values
+useCallback → memoizes functions
+

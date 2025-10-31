@@ -10,7 +10,6 @@ const parenthesisChecker = (str) => {
     const char = str[i];
     if (map.has(char)) {
       stack.push(map.get(char));
-      console.log("stack", stack);
     } else if (char !== stack.pop()) {
       return false;
     }
